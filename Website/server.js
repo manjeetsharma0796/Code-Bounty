@@ -3,6 +3,9 @@
 const express = require('express');
 const { createApp1 } = require('./src/backend');
 
+compilex.init({
+  tempDir: '/tmp'
+});
 // Create the Express app instance
 const app1 = createApp1();
 
