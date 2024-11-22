@@ -190,7 +190,7 @@ const createApp1 = () => {
   });
 
   function cleanTempDirectory() {
-    const tempFolderPath = `${cwd}/temp`; // Hardcoded path to the temporary directory
+    const tempFolderPath = `${cwd}/tmp`; // Hardcoded path to the temporary directory
 
     fs.readdir(tempFolderPath, (err, files) => {
       if (err) {
