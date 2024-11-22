@@ -1,16 +1,12 @@
-const { createApp1 } = require("./src/backend");
+// api/index.js
 
-const main = () => {
-    const app1 = createApp1();
-    
-    const port1 = process.env.PORT2 || 6000;
+const express = require('express');
+const { createApp1 } = require('./src/backend');
 
-    app1.listen(port1, () => console.log("App 1 listening on port", port1));
-};
+// Create the Express app instance
+const app1 = createApp1();
 
-main();
-
-// Vercel expects an exported function
+// Vercel expects an exported function, so we need to use this format.
 module.exports = (req, res) => {
-  app(req, res); // Pass the request and response to Express
+  app1(req, res); // Pass the request and response to Express
 };
